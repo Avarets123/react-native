@@ -6,27 +6,41 @@ import LockIcon from "../../assets/svgs/lockIcon";
 import { Colors } from "../../constants/Colors";
 import ButtonArrow from "../../components/ButtonArrow/ButtonArrow";
 import CustomLink from "../../components/CustomLink/CustomLink";
+import ProfileIcon from "../../assets/svgs/profileIcon";
+import PhoneIcon from "../../assets/svgs/phoneIcon";
 
-export default function Login() {
+export default function Register() {
   return (
     <View>
       <View>
-        <Text style={styles.title}>Войти</Text>
+        <Text style={styles.title}>Регистрация</Text>
 
         <View style={styles.fieldsWrapper}>
+          <CustomField placeholder="Логин" icon={<ProfileIcon />} />
+          <CustomField placeholder="Номер телефона" icon={<PhoneIcon />} />
           <CustomField placeholder="Email" icon={<MessageIcon />} />
+
           <CustomField
             eyeShow
             secure
             placeholder="Пароль"
             icon={<LockIcon />}
           />
-          <CustomLink
-            href="/reset-password/"
-            text="Забыли пароль?"
-            style={styles.forgotPassword}
-          />
         </View>
+
+        <Text
+          style={{
+            marginTop: 50,
+            color: Colors.grey,
+            fontSize: 16,
+            textAlign: "center",
+            marginRight: 10,
+            marginLeft: 10
+
+          }}
+        >
+          Регистрируясь, вы соглашаетесь с нашими условиями использования
+        </Text>
         <ButtonArrow style={styles.btn} />
 
         <View style={styles.footer}>
@@ -35,14 +49,14 @@ export default function Login() {
               color: Colors.grey,
             }}
           >
-            Нет аккаунта?
+            Имеется аккаунт?
           </Text>
           <CustomLink
             style={{
               marginTop: -4,
             }}
-            href="/register/"
-            text="Зарегистрируйтесь"
+            href="/login/"
+            text="Авторизуйтесь"
           />
         </View>
       </View>
@@ -52,12 +66,12 @@ export default function Login() {
 export const styles = StyleSheet.create({
   footer: {
     marginLeft: 10,
-    marginTop: 160,
+    marginTop: 130,
     flexDirection: "row",
     gap: 7,
   },
   btn: {
-    marginTop: 80,
+    marginTop: 60,
     marginRight: 40,
     alignSelf: "flex-end",
   },

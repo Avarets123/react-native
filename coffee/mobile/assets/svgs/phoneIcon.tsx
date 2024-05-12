@@ -1,7 +1,14 @@
 import * as React from "react";
 import Svg, { Path, SvgProps } from "react-native-svg";
 const PhoneIcon = (props: SvgProps) => (
-  <Svg fill="none" {...props}>
+  <Svg
+    fill="none"
+    {...props}
+    style={{
+      width: 20,
+      height: 20,
+    }}
+  >
     <Path
       fill="#001833"
       d="M8.812 2h3.249c.449 0 .812.201.812.45s-.363.45-.812.45H8.812C8.364 2.9 8 2.699 8 2.45S8.364 2 8.812 2Z"
