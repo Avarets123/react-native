@@ -1,16 +1,13 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Colors } from "../constants/Colors";
 import ButtonArrow from "../components/ButtonArrow/ButtonArrow";
 import { useRouter } from "expo-router";
 export default function Welcome() {
-
-  const router = useRouter()
-
-  
+  const router = useRouter();
 
   const toLoginPage = () => {
-    router.push('/login/')
-  }
+    router.push("/login/");
+  };
 
   return (
     <View style={styles.container}>
@@ -24,14 +21,21 @@ export default function Welcome() {
       <Text style={styles.title}>Выбирай баристу</Text>
       <Text style={styles.opacityText}>Магический кофе на заказ</Text>
 
-      <Text style={{
-        textAlign: 'center',
-        marginTop: 10,
-        fontSize: 17,
-        opacity: 0.4
-      }}>Add animation</Text>
+      <Text
+        style={{
+          textAlign: "center",
+          marginTop: 10,
+          fontSize: 17,
+          opacity: 0.4,
+        }}
+      >
+        Add animation
+      </Text>
 
-      <ButtonArrow style={styles.btn}  onPress={toLoginPage}/>
+      <ButtonArrow style={styles.btn} onPress={toLoginPage} />
+      <View>
+        <Text></Text>
+      </View>
     </View>
   );
 }

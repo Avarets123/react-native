@@ -1,6 +1,7 @@
 import { Pressable, View } from "react-native";
 import ArrowLeft from "../../assets/svgs/arrowLeft";
 import { useRouter } from "expo-router";
+import { Colors } from "../../constants/Colors";
 
 export default function ArrowToBack() {
   const router = useRouter();
