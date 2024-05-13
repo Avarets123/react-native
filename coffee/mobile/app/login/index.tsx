@@ -6,8 +6,11 @@ import LockIcon from "../../assets/svgs/lockIcon";
 import { Colors } from "../../constants/Colors";
 import ButtonArrow from "../../components/ButtonArrow/ButtonArrow";
 import CustomLink from "../../components/CustomLink/CustomLink";
+import { useRouter } from "expo-router";
 
 export default function Login() {
+  const router = useRouter();
+
   return (
     <View>
       <View>
@@ -27,7 +30,10 @@ export default function Login() {
             style={styles.forgotPassword}
           />
         </View>
-        <ButtonArrow style={styles.btn} />
+        <ButtonArrow
+          style={styles.btn}
+          onPress={() => router.push("/verification/")}
+        />
 
         <View style={styles.footer}>
           <Text
